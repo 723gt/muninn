@@ -3,3 +3,4 @@ node_js:
   - v6.11.3
 notifications:
   email: false
+  slack: kd-procon:AMXOurVHbljW8LKq1OaLMhHc
