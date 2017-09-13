@@ -2,7 +2,11 @@ var app = require("../app");
 var request = require("supertest");
 var should = require("should");
 
-var test_json = {};
+var test_json = { "player_name": "dummy player",
+                  "music": "dummy music",
+                  "scoer": 100
+                }
+
 describe('コントローラ 正常系 テスト',function(){
   describe('GET /',function(){
     it("JSONが返ってくる",function(done){
