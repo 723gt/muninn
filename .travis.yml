@@ -3,6 +3,9 @@ node_js:
   - v6.11.3
 os:
   - linux
+test:
+  - sqlite3
+  - "./db/muninn_test.sqlite3"
 notifications:
   email: false
   slack: kd-procon:AMXOurVHbljW8LKq1OaLMhHc
