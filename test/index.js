@@ -27,10 +27,10 @@ describe('コントローラ 正常系 テスト',function(){
 })
 
 function postDataChecker(data){
-  data.should.have.length 9;
+  data.should.have.lengthOf(9);
   for(i = 0; i < 9;i++)
   {
-    data[i].should.have.length 5;
+    data[i].should.have.lengthOf(5);
     data[i].should.have.property("music");
     data[i].should.have.property("player_name");
     data[i].should.have.property("scoer");
