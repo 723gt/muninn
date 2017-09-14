@@ -1,3 +1,6 @@
 # Sqlite3 file
 ./db/agroup/agroup.sqlite3
 
+#node_modules
+node_modules/
+
