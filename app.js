@@ -4,7 +4,10 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var dbinit = require('./lib/agroup/dbinit.js');
 
+// agroup database init
+dbinit.init();
 // var index = require('./routes/index');
 var agroup = require('./routes/agroup.js');
 var bgroup = require('./routes/bgroup.js');
