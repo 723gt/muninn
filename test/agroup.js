@@ -2,8 +2,8 @@ var app = require("../app");
 var request = require("supertest");
 var should = require("should");
 var sqlite3 = require("sqlite3");
+var dbinit = require("../lib/agroup/dbinit.js");
 var db = new sqlite3.Database("./db/agroup/agroup.sqlite3");
-
 var test_json = { "player_name": "dummy player",
                   "music": "dummy music",
                   "scoer": 100
