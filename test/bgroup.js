@@ -7,11 +7,11 @@ var test_json = { "player_name": "dummy player",
                   "scoer": 100
                 }
 
-describe('コントローラ 正常系 テスト',function(){
-  describe('GET /',function(){
+describe('B班 コントローラ 正常系 テスト',function(){
+  describe('GET /bgroup/api',function(){
     it("JSONが返ってくる",function(done){
       request(app) 
-      .get('/')
+      .get('/bgroup/api')
       .expect(200)
       .end((err,finn)=>{
         let data = finn.body;
@@ -20,10 +20,10 @@ describe('コントローラ 正常系 テスト',function(){
       })
     });
   })
-  describe('POST /',function(){
+  describe('POST /bgroup/api',function(){
     it("ステータスコード200が返ってくる",function(done){
       request(app)
-      .post('/')
+      .post('/bgroup/api')
       .send(test_json)
       .expect(200,done);
     })
