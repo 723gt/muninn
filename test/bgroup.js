@@ -8,6 +8,15 @@ var test_json = { "player_name": "dummy player",
                 }
 
 describe('B班 コントローラ 正常系 テスト',function(){
+  describe('POST /bgroup/api',function(){
+    it("ステータスコード200が返ってくる",function(done){
+      request(app)
+      .post('/bgroup/api')
+      .send(test_json)
+      .expect(200,done);
+    })
+  })
+
   describe('GET /bgroup/api',function(){
     it("JSONが返ってくる",function(done){
       request(app) 
@@ -19,14 +28,6 @@ describe('B班 コントローラ 正常系 テスト',function(){
         done();
       })
     });
-  })
-  describe('POST /bgroup/api',function(){
-    it("ステータスコード200が返ってくる",function(done){
-      request(app)
-      .post('/bgroup/api')
-      .send(test_json)
-      .expect(200,done);
-    })
   })
 })
 
