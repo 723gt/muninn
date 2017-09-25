@@ -3,6 +3,7 @@ var request = require("supertest");
 var should = require("should");
 var sqlite3 = require("sqlite3");
 var dbinit = require("../lib/agroup/dbinit.js");
+var music_list = require("../lib/agroup/music.json");
 var db = new sqlite3.Database("./db/agroup/agroup.sqlite3");
 var test_json = { "player_name": "dummy player",
                   "music": "dummy music",
@@ -46,6 +47,7 @@ describe('A班 コントローラ 正常系 テスト',function(){
 
 function postDataChecker(data){
   data.should.be.Array;
+  data.should.have.lengthOf(music_list.length);
 }
 
 function beforeFunction(done){
