@@ -4,8 +4,7 @@ var db = require('../lib/agroup/database.js');
 
 /* GET /api */
 router.get('/api', function(req, res, next) {
-  let result_array = db.selectGetData();
-  console.log(result_array);
+  db.selectGetData(res);
 });
 
 /* POST / */
