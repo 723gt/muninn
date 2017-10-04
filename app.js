@@ -14,6 +14,9 @@ var bgroup = require('./routes/bgroup.js');
 
 var app = express();
 
+// static file 
+app.use('/public', express.static('public'));
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');

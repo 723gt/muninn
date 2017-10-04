@@ -17,4 +17,9 @@ router.post('/api',function(req,res,next){
   if(res_flag){res.status(200).end();}
   else{res.status(400).end();}
 })
+
+/* Rank View */
+router.get('/',function(req,res,next){
+  res.render('agroup',{data: "hoge"});
+})
 module.exports = router;
