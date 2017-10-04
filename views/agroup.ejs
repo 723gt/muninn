@@ -7,18 +7,21 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900|Raleway:400,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/public/stylesheets/agroup.css">
     </head>
     <body>
         <div class="text-center">
           <h1>FantaRhythm ランキング</h1>
-          <label>曲名:</label> <%= "music01" %>
+          <h2>曲名: <span class="musictitle"><%= "music01" %></span></h2>
         </div>
         <hr>
           <% var dummy = [{"player_name":"hoge","music":"fuga","scoer":9},{"player_name":"hoge","music":"fuga","scoer":8},{"player_name":"hoge","music":"fuga","scoer":7},{"player_name":"hoge","music":"fuga","scoer":6},{"player_name":"hoge","music":"fuga","scoer":5},{"player_name":"hoge","music":"fuga","scoer":4},{"player_name":"hoge","music":"fuga","scoer":3},{"player_name":"hoge","music":"fuga","scoer":2},{"player_name":"hoge","music":"fuga","scoer":1}] %>
-          <% for(var i = 0; i < dummy.length; i++){ %>
-            <div class="text-center">
-              プレイヤー名: <%= dummy[i]["player_name"] %>
-              スコア: <%= dummy[i]["scoer"] %>
+          <% var rank = data[0] %>
+          <% for(var i = 0; i < rank.length; i++){ %>
+            <div class="text-center scores">
+              プレイヤー名: <%= rank[i]["player_name"] %>
+              スコア: <%= rank[i]["scoer"] %>
+              <%= rank[i]["music"] %>
             </div>
           <% } %>
     </body>

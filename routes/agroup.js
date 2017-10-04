@@ -4,7 +4,7 @@ var db = require('../lib/agroup/database.js');
 
 /* GET /api */
 router.get('/api', function(req, res, next) {
-  db.selectGetData(res);
+  db.selectGetData(res,"5","api");
 });
 
 /* POST / */
@@ -20,6 +20,7 @@ router.post('/api',function(req,res,next){
 
 /* Rank View */
 router.get('/',function(req,res,next){
-  res.render('agroup',{data: "hoge"});
+  db.selectGetData(res,"10","view");
+  // res.render('agroup',{data: "hoge"});
 })
 module.exports = router;
