@@ -4,7 +4,7 @@ var db = require('../lib/agroup/database.js');
 
 /* GET /api */
 router.get('/api', function(req, res, next) {
-  db.selectGetData(res);
+  db.selectGetData(res,"5","api");
 });
 
 /* POST / */
@@ -16,5 +16,10 @@ router.post('/api',function(req,res,next){
   }
   if(res_flag){res.status(200).end();}
   else{res.status(400).end();}
+})
+
+/* Rank View */
+router.get('/:no',function(req,res,next){
+  db.selectGetData(res,"10",req.params.no);
 })
 module.exports = router;

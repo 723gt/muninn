@@ -1,0 +1,17 @@
+
+> muninn@0.0.0 test /Users/natsumi/program/muninn
+> node app.js;mocha
+
+
+
+  A班 コントローラ 正常系 テスト
+    POST /agroup/api
+[0mPOST /agroup/api [32m200 [0m12.193 ms - -[0m
+      ✓ ステータスコード200が返ってくる (43ms)
+    GET /agroup/api
+[0mGET /agroup/api [31m500 [0m3.652 ms - 11[0m
+      ✓ JSONが返ってくる
+
+
+  2 passing (81ms)
+
