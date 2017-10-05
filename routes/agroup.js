@@ -20,8 +20,6 @@ router.post('/api',function(req,res,next){
 
 /* Rank View */
 router.get('/:no',function(req,res,next){
-  console.log(req.params.no);
   db.selectGetData(res,"10",req.params.no);
-  // res.render('agroup',{data: "hoge"});
 })
 module.exports = router;
