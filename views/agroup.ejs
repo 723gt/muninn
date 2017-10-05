@@ -8,21 +8,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900|Raleway:400,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="/public/stylesheets/agroup.css">
+        <script>
+          console.log(location.href);
+          function nextStep(){    
+            var path = "http://localhost:3000/agroup/"
+            var path_num = Number(location.pathname.match( /[^/]+$/i )[0]) ; 
+            if(path_num == 1){ path_num = 0}
+            else{ path_num += 1}
+            path = path + path_num;
+            console.log(path);
+            location.href = path;
+          }
+        </script>
     </head>
-    <body>
+    <body onload="setTimeout('nextStep()', 5000);">
         <div class="text-center">
           <h1>FantaRhythm ランキング</h1>
-          <h2>曲名: <span class="musictitle"><%= "music01" %></span></h2>
+          <h2>曲名: <span class="musictitle"><%= data.array[data.num][0]["music"] %></span></h2>
         </div>
         <hr>
-          <% var rank = data[0] %>
+          <% var rank = data.array[data.num] %>
           <% for(var i = 0; i < rank.length; i++){ %>
             <div class="text-center scores">
               <%= i + 1 %>位
               プレイヤー名: <%= rank[i]["player_name"] %>
               スコア: <%= rank[i]["scoer"] %>
-              <%= rank[i]["music"] %>
             </div>
-          <% } %>
+          <% } 
+          %>
     </body>
 </html>
