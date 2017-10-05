@@ -4,14 +4,22 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var dbinit = require('./lib/agroup/dbinit.js');
 
-var index = require('./routes/index');
+// agroup database init
+dbinit.init();
+// var index = require('./routes/index');
+var agroup = require('./routes/agroup.js');
+var bgroup = require('./routes/bgroup.js');
 
 var app = express();
 
+// static file 
+app.use('/public', express.static('public'));
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -21,8 +29,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', index);
-
+// app.use('/', index);
+app.use('/agroup',agroup);
+app.use('/bgroup',bgroup);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
