@@ -11,7 +11,8 @@
         <script>
           function nextStep(){    
             var port = location.port;
-            var path = `http://localhost:${port}/agroup/`
+            var host = location.host;
+            var path = `http://${host}:${port}/agroup/`;
             var path_num = Number(location.pathname.match( /[^/]+$/i )[0]) ; 
             if(path_num == 1){ path_num = 0}
             else{ path_num += 1}
