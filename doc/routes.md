@@ -3,7 +3,7 @@
 ## A班 
 
 - ランキング表示  
-  - app/agroup  
+  - app/agroup/0  
 - API GET  
   - app/agroup/api
 - API POST  
