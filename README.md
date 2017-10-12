@@ -36,7 +36,7 @@ $ npm install
 ## サーバの起動  
 ```
 $ cd muninn
-$ npm start
+$ sudo npm start
 ```
 
 ## テストの実行  
