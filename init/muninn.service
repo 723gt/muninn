@@ -1,0 +1,8 @@
+[Unit]
+Description=Muninn Web Server
+
+[Service]
+ExecStart=/home/pi/.nvm/versions/node/v7.8.0/bin/npm start /home/pi/muninn/
+
+[Install]
+WantedBy=multi-user.target
