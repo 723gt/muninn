@@ -5,7 +5,7 @@
 {
     "player_name" : "String",
     "music": "String",
-    "scoer": Integer
+    "score": Integer
 }
 ```
 
@@ -17,46 +17,46 @@
       "music" : "String",
       # 1位
       {"player_name": "String",
-       "scoer": Integer
+       "score": Integer
       },
       # 2位
       {"player_name": "String",
-       "scoer": Integer
+       "score": Integer
       },
       # 3位
       {"player_name": "String",
-       "scoer": Integer
+       "score": Integer
       },
       # 4位
       {"player_name": "String",
-       "scoer": Integer
+       "score": Integer
       },
       # 5位
       {"player_name": "String",
-       "scoer": Integer
+       "score": Integer
        }
      ],
      [
       "music" : "String",
       # 1位
       {"player_name": "String",
-       "scoer": Integer
+       "score": Integer
       },
       # 2位
       {"player_name": "String",
-       "scoer": Integer
+       "score": Integer
       },
       # 3位
       {"player_name": "String",
-       "scoer": Integer
+       "score": Integer
       },
       # 4位
       {"player_name": "String",
-       "scoer": Integer
+       "score": Integer
       },
       # 5位
       {"player_name": "String",
-       "scoer": Integer
+       "score": Integer
        }
      ]
   ]

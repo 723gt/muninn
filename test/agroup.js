@@ -7,12 +7,12 @@ var music_list = require("../lib/agroup/music.json");
 var db = new sqlite3.Database("./db/agroup/agroup.sqlite3");
 var test_json = { "player_name": "dummy player",
                   "music": "dummy music",
-                  "scoer": 100
+                  "score": 100
                 };
 
 var dummy_json = {"player_name": "before dummy",
                   "music": "before music dummy",
-                  "scoer": 200
+                  "score": 200
                  };
 
 describe('A班 コントローラ 正常系 テスト',function(){
@@ -52,10 +52,10 @@ function postDataChecker(data){
 
 function beforeFunction(done){
   db.serialize(function(){
-    db.run('insert into agroup(player_name,music,scoer) values ($p,$m,$s)',{
+    db.run('insert into agroup(player_name,music,score) values ($p,$m,$s)',{
       $p: dummy_json.player_name,
       $m: dummy_json.music,
-      $s: dummy_json.scoer
+      $s: dummy_json.score
     })
     done();
   })
