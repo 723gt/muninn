@@ -11,7 +11,7 @@ router.get('/api', function(req, res, next) {
 router.post('/api',function(req,res,next){
   let data = req.body;
   let res_flag = false;
-  if(data.player_name  && data.music && data.scoer){
+  if(data.player_name  && data.music && data.score){
     res_flag = db.insertPostData(data);
   }
   if(res_flag){res.status(200).end();}
