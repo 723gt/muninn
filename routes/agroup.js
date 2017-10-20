@@ -15,7 +15,7 @@ router.post('/api',function(req,res,next){
     res_flag = db.insertPostData(data);
   }
   if(res_flag){res.status(200).end();}
-  else{res.status(400).end();}
+  else{console.log(req.body);res.status(400).end();}
 })
 
 /* Rank View */
