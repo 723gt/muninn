@@ -41,6 +41,9 @@ $ npm install
 $ cd muninn
 $ screen
 $ sudo npm start
+#UDPサーバの起動
+Ctrl + a -> c
+$ node udpserver.js
 ```
 
 ## テストの実行  
