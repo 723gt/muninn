@@ -7,6 +7,7 @@ try{
   sock = dgram.createSocket("udp4",function(msg,info){
     try{
       let data = JSON.parse(msg);
+      if(typeof data.score === "string"){data.score = Number(data.score)}
       console.log("Send Data is:" + msg);
       db.insertPostData(data);
     }
