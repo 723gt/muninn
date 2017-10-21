@@ -6,6 +6,8 @@ console.log("UDP Server Start!!");
 try{
   sock = dgram.createSocket("udp4",function(msg,info){
     try{
+      var re = /\0/g;
+      msg = msg.toString().replace(re, "");
       let data = JSON.parse(msg);
       if(typeof data.score === "string"){data.score = Number(data.score)}
       console.log("Send Data is:" + msg);
