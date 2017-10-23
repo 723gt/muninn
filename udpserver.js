@@ -12,6 +12,7 @@ try{
       if(typeof data.score === "string"){data.score = Number(data.score)}
       console.log("Send Data is:" + msg);
       db.insertPostData(data);
+      let res = db.selectGetData(null,"5","udp");
     }
     catch(e){
       console.log(e);
