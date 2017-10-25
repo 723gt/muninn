@@ -3,5 +3,24 @@
 }
 
 .musictitle{
-    color: #e2802b;
+    color: #33b950;
+}
+
+.game_title{
+    color: rgb(199, 202, 23);
+}
+
+.scores{
+    font-weight: bold;
+    color: #f00d0d;
+}
+
+body{
+    background-image: url(/public/images/background.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #e6121245;
+    color: #ffffff;
 }
