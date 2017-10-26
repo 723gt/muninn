@@ -9,7 +9,7 @@
 }
 
 .game_title{
-    color: rgb(199, 202, 23);
+    color: rgb(43, 40, 250);
 }
 
 body{
@@ -19,5 +19,5 @@ body{
     background-attachment: fixed;
     background-size: cover;
     background-color: #e6121245;
-    color: #ffffff;
+    color: #585454;
 }
