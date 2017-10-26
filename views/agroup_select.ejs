@@ -9,9 +9,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href='/public/stylesheets/google.css' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="/public/stylesheets/agroup.css">
+        <script src="/public/javascripts/agroup.js"></script>
     </head>
-    <body>
-        <audio src="<%= data.array[data.num][0]["music"] %>.mp3" autoplay loop></audio>
+    <body onload="mousestc()">
+ 
+        <audio src="/public/music/<%= data.num %>.mp3" autoplay loop></audio>
         <div class="text-center">
           <h1><span class="game_title">FantaRhythm</span> ランキング</h1>
           <h2>曲名: <span class="musictitle"><%= data.array[data.num][0]["music"] %></span></h2>
@@ -26,7 +28,7 @@
             </div>
           <% } 
           %>
-          <div class="text-cente blocl-center">
+          <div class="text-center blocl-center">
             <a href="/agroup/" role="button" class="btn btn-primary btn-lg btn-danger">戻る</a>
           </div>
           
