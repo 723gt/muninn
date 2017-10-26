@@ -7,11 +7,11 @@ const PORT = 3333;
 let s = process.argv[2]
 var json = `{ "player_name" : "Fuga","music": "Himmel\'s wander","score": ${s}}`
 // var json = "{\"player_name\":\"osugi\",\"music\":\"Himmel\'s wander\",\"score\":\"1234567\"}"
-var msg = new Buffer(json);
+//var msg = new Buffer(json);
 
 sock = dgram.createSocket('udp4');
 
-sock.send(msg,0,msg.length,PORT,HOST,function(err,bytes){
+sock.send(json,0,json.length,PORT,HOST,function(err,bytes){
   if(err){console.log(err)}
   sock.close();
 })

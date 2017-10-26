@@ -3,6 +3,7 @@
     <head>
         <title>FantaRhythm</title>
         <meta charset="UTF-8"> 
+        <link  rel="shortcut icon" href="/public/images/favicon.ico">
         <link rel="stylesheet"  href="/public/stylesheets/bootstrap.css">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,8 +32,8 @@
           <% for(var i = 0; i < rank.length; i++){ %>
             <div class="text-center scores">
               <%= i + 1 %>位
-              プレイヤー名: <%= rank[i]["player_name"] %>
-              スコア: <%= rank[i]["score"] %>
+              <%= rank[i]["player_name"] %>
+              <%= rank[i]["score"] %>
             </div>
           <% } 
           %>
