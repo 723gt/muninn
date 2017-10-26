@@ -1,5 +1,7 @@
 .scores{
     font-size: 35px;
+    font-weight: bold;
+    color: #f00d0d;
 }
 
 .musictitle{
@@ -8,11 +10,6 @@
 
 .game_title{
     color: rgb(199, 202, 23);
-}
-
-.scores{
-    font-weight: bold;
-    color: #f00d0d;
 }
 
 body{
