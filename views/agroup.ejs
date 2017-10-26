@@ -33,16 +33,13 @@
             <% if(i < 3) { %>
               <div class="text-center high_scores">
                 <%= i + 1 %>位
-                <%= rank[i]["player_name"] %>
-                <%= rank[i]["score"] %>
-              </div>
             <% }else{ %>
               <div class="text-center scores">
                 <%= i + 1 %>位
-                <%= rank[i]["player_name"] %>
-                <%= rank[i]["score"] %>
-              </div>
             <% } %>
+            <%= rank[i]["player_name"] %>
+            <%= rank[i]["score"] %>
+          </div>
           <% } 
           %>
     </body>
