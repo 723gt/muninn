@@ -1,8 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script>
+    function redirect(){
+      var port = location.port;
+      var host = location.host;
+      var path = `http://${host}:${port}/agroup/0`;
+      location.href = path;
+    }
+  </script>
 </head>
-<body>
-  <a href="/agroup/0"> A班 ランキング </a>
+<body onload="redirect()">
+  <!-- <a href="/agroup/0"> A班 ランキング </a> -->
 </body>
 </html>
