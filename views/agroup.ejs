@@ -22,7 +22,8 @@
           }
         </script>
     </head>
-    <body onload="setTimeout('nextStep()', 5000);">
+    <body onload="setTimeout('nextStep()', 15000);">
+        <audio src="/public/music/<%= Number(data.num) + 1 %>.wav" autoplay loop></audio>
         <div class="text-center">
           <h1><span class="game_title">FantaRhythm</span> ランキング</h1>
           <h2>曲名: <span class="musictitle"><%= data.array[data.num][0]["music"] %></span></h2>
