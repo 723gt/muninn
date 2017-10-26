@@ -13,7 +13,7 @@
     </head>
     <body onload="mousestc()">
  
-        <audio src="/public/music/<%= data.num %>.mp3" autoplay loop></audio>
+        <audio src="/public/music/<%= Number(data.num) + 1 %>.wav" autoplay loop></audio>
         <div class="text-center">
           <h1><span class="game_title">FantaRhythm</span> ランキング</h1>
           <h2>曲名: <span class="musictitle"><%= data.array[data.num][0]["music"] %></span></h2>
