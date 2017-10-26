@@ -40,3 +40,13 @@ body{
     -webkit-transition: left 1.5s ease-in-out 0s, top 1.5s ease-in-out 0s; /*webkit 系のクロスブラウザ*/
     z-index: 9999;
 }
+
+.scroll img{
+  display     : inline-block;
+  padding-right: 100%;
+  animation   : scrollAnime 15s linear infinite;
+ }
+  @keyframes scrollAnime{
+      0% { transform: translateX(0)}
+    100% { transform: translateX(100%)}
+  }
