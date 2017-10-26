@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <title>FantaRhythm</title>
+        <meta charset="UTF-8"> 
+        <link  rel="shortcut icon" href="/public/images/favicon.ico">
+        <link rel="stylesheet"  href="/public/stylesheets/bootstrap.css">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='/public/stylesheets/google.css' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/public/stylesheets/agroup.css">
+    </head>
+    <body>
+        <div class="text-center">
+          <h1><span class="game_title">FantaRhythm</span> ランキング</h1>
+          <h2>曲名: <span class="musictitle"><%= data.array[data.num][0]["music"] %></span></h2>
+        </div>
+        <hr>
+          <% var rank = data.array[data.num]; %>
+          <% for(var i = 0; i < rank.length; i++){ %>
+            <div class="text-center scores">
+              <%= i + 1 %>位
+              <%= rank[i]["player_name"] %>
+              <%= rank[i]["score"] %>
+            </div>
+          <% } 
+          %>
+          <div class="text-cente blocl-center">
+            <a href="/agroup/" role="button" class="btn btn-primary btn-lg btn-danger">戻る</a>
+          </div>
+          
+    </body>
+</html>

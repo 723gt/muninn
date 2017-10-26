@@ -22,4 +22,13 @@ router.post('/api',function(req,res,next){
 router.get('/:no',function(req,res,next){
   db.selectGetData(res,"10",req.params.no);
 })
+
+/* Rank View */
+router.get('/select/:no',function(req,res,next){
+  db.selectGetData(res,"10","select",req.params.no);
+})
+
+router.get('/',function(req,res,next){
+  res.render("select");
+})
 module.exports = router;
